@@ -1,0 +1,16 @@
+<!-- index.nunjucks -->
+{% extends "layout.html" %}
+<!--TITLE setting-->
+{% block title %} 專案{% endblock %}
+<!--Nav setting-->
+{% block navigation %}
+    {% import 'macros/nav.html' as nav %}
+    <!-- Set navitem to active -->
+    {{nav.active('index')}}
+{% endblock %}
+
+{% block content %} 
+<section class="container py-4">
+  234
+</section>
+{% endblock %}

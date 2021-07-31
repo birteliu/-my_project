@@ -1,0 +1,8 @@
+.menu {
+    a {
+        padding: 0 1.25rem;
+        &:hover {
+            color: $gray-600;
+        }
+    }
+}

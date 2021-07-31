@@ -1,0 +1,75 @@
+<!-- index.nunjucks -->
+{% extends "layout.html" %}
+<!--TITLE setting-->
+{% block title %} 首頁{% endblock %}
+<!--Nav setting-->
+{% block navigation %}
+    {% import 'macros/nav.html' as nav %}
+    <!-- Set navitem to active -->
+    {{nav.active('index')}}
+{% endblock %}
+
+{% block content %} 
+<section class="container py-4">
+  <div class="row">
+    <div class="col-md-8 d-flex align-items-center">
+      <div class="px-5">
+        <h4>我是豪萱</h4>
+        <p>UI / UX 設計師，目前接觸的專案有 B2B 的企業系統管理類型和 B2C 的我是豪萱，UI / UX 設計師，目前接觸的專案有 B2B 的企業系統管理類型和 B2C 的。</p>
+        <button class="btn btn01 rounded-pill px-4">履歷</button>
+      </div>
+    </div>
+    <div class="col-md-4 text-center">
+      <img src="images/self.png" alt="" class="img-fluid">
+    </div>
+  </div>
+</section>
+<section class="container-fluid point-project p-5">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-3">
+        <i class="las la-highlighter main01 la-2x"></i>
+        <h4 class="mt-2 fw-bold main01">我的作品</h4>
+        <p class="pe-4">簡單介紹簡單介紹簡單介紹簡單介紹，簡單介紹簡單介紹簡單介紹</p>
+      </div>
+      <div class="col-md-9">
+        <div class="row">
+          <h4 class="year">2021</h4>
+          <div class="col-md-4">
+            <a href="project-erp.html" class="card product-card">
+              <img src="images/project1.png" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5>凌誠農業 ERP</h5>
+                <p>專為大型農業用戶打造的流通加工管理系統</p>
+                <span>WEB/APP 設計</span>
+              </div>
+            </a>
+          </div>
+          <div class="col-md-4">
+            <a href="project-erp.html" class="card product-card">
+              <img src="images/project1.png" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5>凌誠農業 ERP</h5>
+                <p>專為大型農業用戶打造的流通加工管理系統</p>
+                <span>WEB/APP 設計</span>
+              </div>
+            </a>
+          </div>
+
+          <h4 class="year mt-4">2020</h4>
+          <div class="col-md-4">
+            <a href="#" class="card product-card">
+              <img src="images/project1.png" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5>凌誠農業 ERP</h5>
+                <p>專為大型農業用戶打造的流通加工管理系統</p>
+                <span>WEB/APP 設計</span>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+{% endblock %}

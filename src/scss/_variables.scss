@@ -1,0 +1,64 @@
+// Variables
+//
+// Variables should follow the `$component-state-property-size` formula for
+// consistent naming. Ex: $nav-link-disabled-color and $modal-content-box-shadow-xs.
+
+//預設文字顏色
+$text-color: #22283d;
+
+// ====== 客制範圍 ======
+// 主色系變數
+$main01: #60892F; //主色
+$main02: #DADADA; //輔助色
+$main03: #f4f8f7; //輔助色
+$main04: #FD7738; //強調色
+$main05: #ffa67c; //基色
+
+$main01-light: #BBD0A1;
+$main02-light: #FAFBFD;
+
+.main01 {
+  color: $main01 !important;
+}
+
+.bg01 {
+  background: $main01;
+  color: #fff;
+}
+.bg01-light {
+  background: $main01-light;
+}
+.bg02-light {
+  background: $main02-light;
+}
+
+.btn01 {
+  color: #fff;
+  background: $main01;
+  border: $main01;
+  &:hover {
+    color: #fff;
+    background: darken($main01, 5%);
+    border: darken($main01, 8%);
+  }
+  &.outline-btn {
+    color: $main01;
+    background: transparent;
+    &:hover {
+      background: $main01-light;
+      border: darken($main01, 5%);
+      color: $main01;
+    }
+  }
+}
+
+.link-color {
+  color: $main01;
+  &:hover {
+    color: darken($main01, 5%);
+  }
+}
+
+// 客制變數
+$custom-box-shadow: -10px 10px 20px 0px rgba(30, 30, 30, 0.05);
+$custom-border-radius: 5px;
