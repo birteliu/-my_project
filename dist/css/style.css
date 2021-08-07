@@ -10440,7 +10440,6 @@ fieldset:disabled .btn {
 
 html {
   overflow-x: hidden;
-  scroll-behavior: smooth !important;
 }
 
 body {
@@ -10448,12 +10447,17 @@ body {
   overflow-x: hidden;
   height: 100vh;
   overflow-y: scroll;
+  scroll-behavior: smooth;
 }
 
 a {
   color: #22283d;
   text-decoration: none;
   transition: .3s;
+}
+
+footer {
+  background-color: #e9ecef;
 }
 
 footer a {
@@ -10529,7 +10533,7 @@ footer a:hover {
   height: 100%;
   top: 0;
   right: 0;
-  background: linear-gradient(90deg, rgba(250, 251, 253, 0) -17.53%, #0BA4B8 80.1%);
+  background: linear-gradient(90deg, rgba(250, 251, 253, 0) -20%, #60892F 85%);
 }
 
 .project-banner .banner-content {
@@ -10540,6 +10544,18 @@ footer a:hover {
   font-weight: bold;
   margin-top: 1rem;
   margin-bottom: 0;
+}
+
+@media (max-width: 575.98px) {
+  .project-banner .banner-content h5, .project-banner .banner-content .h5 {
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .project-banner .banner-content {
+    text-align: right;
+  }
 }
 
 .project-content .project-menu {
@@ -10587,6 +10603,10 @@ footer a:hover {
 }
 
 .project-content p {
+  font-size: 1.1rem;
+}
+
+.project-content .nav-pills {
   font-size: 1.1rem;
 }
 

@@ -1,13 +1,13 @@
 //共用
 html {
     overflow-x: hidden;
-    scroll-behavior: smooth!important;
 }
 body {
     font-family: "Lato", "Noto Sans TC", sans-serif;
     overflow-x: hidden;
     height: 100vh;
     overflow-y: scroll;
+    scroll-behavior: smooth;
 }
 a {
     color: $text-color;
@@ -15,9 +15,10 @@ a {
     transition: .3s;
 }
 footer {
+    background-color: $gray-200;
     a {
         color: $gray-600;
-        &:hover {
+        &:hover { 
             color: $gray-800;
         }
     }
@@ -78,7 +79,7 @@ footer {
         height: 100%;
         top: 0;
         right: 0;
-        background: linear-gradient(90deg, rgba(250, 251, 253, 0) -17.53%, #0BA4B8 80.1%);
+        background: linear-gradient(90deg, rgba(250, 251, 253, 0) -20%, #60892F 85%);
     }
     .banner-content {
         z-index: 1;
@@ -86,6 +87,12 @@ footer {
             font-weight: bold;
             margin-top: 1rem;
             margin-bottom: 0;
+            @include media-breakpoint-down(sm) {
+                font-size: 1.1rem;
+            }
+        }
+        @include media-breakpoint-down(sm) {
+            text-align: right;
         }
     }
 }
@@ -132,6 +139,7 @@ footer {
         font-size: 1.1rem;
     }
     .nav-pills {
+        font-size: 1.1rem;
         button {
             color: $gray-500;
             border-bottom: 3px solid $gray-300;
