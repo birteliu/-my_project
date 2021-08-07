@@ -10440,11 +10440,14 @@ fieldset:disabled .btn {
 
 html {
   overflow-x: hidden;
+  scroll-behavior: smooth !important;
 }
 
 body {
   font-family: "Lato", "Noto Sans TC", sans-serif;
   overflow-x: hidden;
+  height: 100vh;
+  overflow-y: scroll;
 }
 
 a {
@@ -10537,6 +10540,71 @@ footer a:hover {
   font-weight: bold;
   margin-top: 1rem;
   margin-bottom: 0;
+}
+
+.project-content .project-menu {
+  position: sticky;
+  top: 2rem;
+  align-self: start;
+}
+
+.project-content .project-menu a {
+  text-decoration: none;
+  display: block;
+  color: #adb5bd;
+  transition: .3s;
+  line-height: 2;
+}
+
+.project-content .project-menu a:hover, .project-content .project-menu a:focus {
+  color: #6c757d;
+}
+
+.project-content .project-menu li.active a {
+  color: #60892F;
+  font-weight: bold;
+}
+
+.project-content .project-menu li.active a:before {
+  content: "";
+  display: block;
+  width: 10px;
+  height: 10px;
+  background-color: #60892F;
+  display: inline-block;
+  margin-left: -20px;
+  margin-right: 10px;
+  border-radius: 10px;
+}
+
+.project-content h6, .project-content .h6 {
+  color: #60892F;
+  background-color: #d1e6b7;
+  border-radius: 50px;
+  padding: .5rem 1.5rem;
+  display: inline-block;
+  font-weight: bold;
+}
+
+.project-content p {
+  font-size: 1.1rem;
+}
+
+.project-content .nav-pills button {
+  color: #adb5bd;
+  border-bottom: 3px solid #dee2e6;
+  border-radius: 0;
+}
+
+.project-content .nav-pills button:hover {
+  color: #6c757d;
+  border-bottom: 3px solid #adb5bd;
+}
+
+.project-content .nav-pills button.active {
+  color: #60892F;
+  background-color: #fff;
+  border-bottom: 3px solid #60892F;
 }
 
 /*# sourceMappingURL=style.css.map */

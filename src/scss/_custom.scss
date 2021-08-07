@@ -1,10 +1,13 @@
 //共用
 html {
     overflow-x: hidden;
+    scroll-behavior: smooth!important;
 }
 body {
     font-family: "Lato", "Noto Sans TC", sans-serif;
     overflow-x: hidden;
+    height: 100vh;
+    overflow-y: scroll;
 }
 a {
     color: $text-color;
@@ -61,7 +64,7 @@ footer {
     }
 }
 
-//專案
+//專案詳細內容
 .project-banner {
     background-image: url("../images/project1.png");
     @include background-img;
@@ -83,6 +86,65 @@ footer {
             font-weight: bold;
             margin-top: 1rem;
             margin-bottom: 0;
+        }
+    }
+}
+.project-content {
+    .project-menu {
+        position: sticky;
+        top: 2rem;
+        align-self: start;
+        a {
+            text-decoration: none;
+            display: block;
+            color: $gray-500;
+            transition: .3s;
+            line-height: 2;
+            &:hover, &:focus {
+                color: $gray-600;
+            }
+        }
+        li.active a {
+            color: $main01;
+            font-weight: bold;
+            &:before {
+                content: "";
+                display: block;
+                width: 10px;
+                height: 10px;
+                background-color: $main01;
+                display: inline-block;
+                margin-left: -20px;
+                margin-right: 10px;
+                border-radius: 10px;
+            }
+        }
+    }
+    h6 {
+        color: $main01;
+        background-color: lighten($main01, 45%);
+        border-radius: 50px;
+        padding: .5rem 1.5rem;
+        display: inline-block;
+        font-weight: bold;
+    }
+    p {
+        font-size: 1.1rem;
+    }
+    .nav-pills {
+        button {
+            color: $gray-500;
+            border-bottom: 3px solid $gray-300;
+            border-radius: 0;
+            &:hover {
+                color: $gray-600;
+                border-bottom: 3px solid $gray-500;
+            }
+            &.active {
+                color: $main01;
+                background-color: #fff;
+                border-bottom: 3px solid $main01;
+            }
         }
     }
 }
